@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎓 Student Management</h1>
+
+    <div class="top-bar">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Student..."
+            onkeyup="searchStudent()"
+        >
+
+        <button onclick="window.location.href='dashboard.html'">
+            Dashboard
+        </button>
+
+    </div>
+
+    <div class="student-form">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Student Name"
+        >
+
+        <input
+            type="number"
+            id="age"
+            placeholder="Age"
+        >
+
+        <input
+            type="text"
+            id="course"
+            placeholder="Course"
+        >
+
+        <input
+            type="number"
+            id="marks"
+            placeholder="Marks"
+        >
+
+        <button onclick="addStudent()">
+            Add Student
+        </button>
+
+    </div>
+
+    <table>
+
+        <thead>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Attendance</th>
+            <th>Grade</th>
+            <th>Actions</th>
+        </tr>
+
+        </thead>
+
+        <tbody id="studentTable">
+
+        </tbody>
+
+    </table>
+
+    <div class="export-buttons">
+
+        <button onclick="exportPDF()">
+            Export PDF
+        </button>
+
+        <button onclick="exportExcel()">
+            Export Excel
+        </button>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<script src="js/students.js"></script>
+
+<script src="js/attendance.js"></script>
+
+<script src="js/export.js"></script>
+
+</body>
+</html>

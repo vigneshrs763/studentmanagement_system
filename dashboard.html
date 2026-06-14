@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Student Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <h2>🎓 SMS</h2>
+
+        <ul>
+
+            <li>
+                📊 Dashboard
+            </li>
+
+            <li onclick="window.location.href='index.html'">
+                👨‍🎓 Students
+            </li>
+
+            <li onclick="toggleDarkMode()">
+                🌙 Dark Mode
+            </li>
+
+            <li onclick="logout()">
+                🚪 Logout
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <h1>📊 Dashboard</h1>
+
+        <!-- Dashboard Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+                <h2 id="totalStudents">0</h2>
+                <p>Total Students</p>
+            </div>
+
+            <div class="card">
+                <h2 id="presentStudents">0</h2>
+                <p>Present Students</p>
+            </div>
+
+            <div class="card">
+                <h2 id="absentStudents">0</h2>
+                <p>Absent Students</p>
+            </div>
+
+            <div class="card">
+                <h2 id="averageMarks">0</h2>
+                <p>Average Marks</p>
+            </div>
+
+            <div class="card">
+                <h2 id="attendancePercentage">0%</h2>
+                <p>Attendance Percentage</p>
+            </div>
+
+            <div class="card">
+                <h2 id="highestMarks">0</h2>
+                <p>Highest Marks</p>
+            </div>
+
+            <div class="card">
+                <h2 id="lowestMarks">0</h2>
+                <p>Lowest Marks</p>
+            </div>
+
+        </div>
+
+        <!-- Chart -->
+
+        <div class="chart-container">
+
+            <h2>📈 Student Analytics</h2>
+
+            <canvas id="studentChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="js/auth.js"></script>
+
+    <script src="js/students.js"></script>
+
+    <script src="js/attendance.js"></script>
+
+    <script src="js/marks.js"></script>
+
+    <script src="js/charts.js"></script>
+
+    <script>
+        updateDashboard();
+       
+        
+    </script>
+
+</body>
+
+</html>
